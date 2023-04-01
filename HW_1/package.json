@@ -1,0 +1,27 @@
+{
+  "name": "hw_1",
+  "version": "1.0.0",
+  "description": "Patika.dev React/Homework 1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altiokbaki/Patika-DEV-React-Homeworks.git"
+  },
+  "keywords": [
+    "React",
+    "ES6"
+  ],
+  "author": "Osman Baki ALTIOK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altiokbaki/Patika-DEV-React-Homeworks/issues"
+  },
+  "homepage": "https://github.com/altiokbaki/Patika-DEV-React-Homeworks#readme",
+  "dependencies": {
+    "axios": "^1.3.4"
+  }
+}
