@@ -1,19 +1,23 @@
 import axios from "axios";
+  //Global constants.
   const rawUserURL = "https://jsonplaceholder.typicode.com/users/";
   const rawPostURL = "https://jsonplaceholder.typicode.com/posts?userId=";
 
 export default async function getData(userID) {
-  let response = await (await getUser(userID)).data;
+  //Fetch.
+  let userInfo = await (await getUser(userID)).data;
   let usersPosts = await (await getPosts(userID)).data;
 
+  //Return as one object.
   return {
-    ...response,
+    ...userInfo,
     posts: usersPosts,
   };
 }
+//Function to get user information.
 async function getUser(_userID) {
   let res;
-
+  
   try {
     res = axios.get(rawUserURL + _userID);
   } catch (err) {
@@ -22,6 +26,7 @@ async function getUser(_userID) {
 
   return res;
 }
+//Function to get users posts.
 async function getPosts(_userID) {
   let res;
 
